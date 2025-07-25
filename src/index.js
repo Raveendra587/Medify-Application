@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    // errorElement: <ErrorPage />, // Add an error page
     children: [
       {
         path: "search",
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <MyBookings />,
       },
       {
-        path: "/",
+        index: true, // Use 'index' instead of path "/" for home
         element: <Home />,
       },
     ],
